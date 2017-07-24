@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CAS Regression Test Cases"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="25.500">
+  <properties />
+  
+  
+            <testcase name="Disbursal" time="25.500" classname="Test_Finnone.Disbursal_Initiation" />
+      
+</testsuite>

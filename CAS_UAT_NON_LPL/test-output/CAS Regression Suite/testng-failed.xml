@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CAS Regression Suite]">
+  <listeners>
+    <listener class-name="utility.EmailableReporter"/>
+    <listener class-name="utility.ExecutionListerner"/>
+  </listeners>
+  <test name="CAS Regression Test Cases(failed)">
+    <classes>
+      <class name="UAT_CAS_Other_than__LPL.Disbursal_details">
+        <methods>
+          <include name="Disbursal_detail"/>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.Disbursal_details -->
+      <class name="UAT_CAS_Other_than__LPL.FI_Verification_four_checklist">
+        <methods>
+          <include name="Application_logout"/>
+          <include name="FI_Verification"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.FI_Verification_four_checklist -->
+      <class name="UAT_CAS_Other_than__LPL.FI_Initiation_four_checklist">
+        <methods>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+          <include name="FIinitiation"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.FI_Initiation_four_checklist -->
+      <class name="UAT_CAS_Other_than__LPL.Underwriting">
+        <methods>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+          <include name="Underwriting_CAS" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.Underwriting -->
+      <class name="UAT_CAS_Other_than__LPL.Cibil_Referral">
+        <methods>
+          <include name="CibilDetails"/>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.Cibil_Referral -->
+      <class name="UAT_CAS_Other_than__LPL.DDEQC">
+        <methods>
+          <include name="Application_logout"/>
+          <include name="DDEQC_CAS" invocation-numbers="0"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.DDEQC -->
+      <class name="UAT_CAS_Other_than__LPL.Disbursal_Initiation">
+        <methods>
+          <include name="Disbursal" invocation-numbers="0"/>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.Disbursal_Initiation -->
+      <class name="UAT_CAS_Other_than__LPL.FI_Completion">
+        <methods>
+          <include name="FI_Verification"/>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.FI_Completion -->
+      <class name="UAT_CAS_Other_than__LPL.PDOC">
+        <methods>
+          <include name="Application_logout"/>
+          <include name="PDOCDetails"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.PDOC -->
+    </classes>
+  </test> <!-- CAS Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [CAS Regression Suite] -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression_CAS_Testing]">
+  <test name="Regression_Suite(failed)">
+    <classes>
+      <class name="Test_Finnone.sourcing_finnone">
+        <methods>
+          <include name="Sourcing" invocation-numbers="0"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- Test_Finnone.sourcing_finnone -->
+    </classes>
+  </test> <!-- Regression_Suite(failed) -->
+  <test name="Regression_Suite1(failed)">
+    <classes>
+      <class name="Test_Finnone.DDE_finnone">
+        <methods>
+          <include name="DDE" invocation-numbers="0"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- Test_Finnone.DDE_finnone -->
+    </classes>
+  </test> <!-- Regression_Suite1(failed) -->
+</suite> <!-- Failed suite [Regression_CAS_Testing] -->

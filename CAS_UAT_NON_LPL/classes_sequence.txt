@@ -1,0 +1,60 @@
+<test name="QDE">
+    <classes>
+      	<class name="Test_Finnone.sourcing_finnone" /> 
+    </classes>
+  </test>
+  <test name="DDE">
+    <classes>
+      	<class name="Test_Finnone.DDE_finnone" /> 
+    </classes>
+  </test>
+  <test name="Cibil">
+    <classes>
+      	<class name="Test_Finnone.Cibil_finnone" /> 
+    </classes>
+  </test>
+  <test name="DDEQC">
+    <classes>
+      	<class name="Test_Finnone.DDEQC_finnone" /> 
+    </classes>
+  </test>
+   <test name="FI_Initiation">
+    <classes>
+      	<class name="Test_Finnone.FI_Initiation_Finnone" /> 
+    </classes>
+  </test>
+   <test name="Underwriting">
+    <classes>
+      	<class name="Test_Finnone.Underwriting_finnone" /> 
+    </classes>
+  </test>
+  </test>
+   <test name="PDOC">
+    <classes>
+      	<class name="Test_Finnone.Underwriting_finnone" /> 
+    </classes>
+  </test>
+	<test name="Disbursal_Details">
+    <classes>
+      	<class name="Test_Finnone.Disbursal_details" /> 
+    </classes>
+  </test>   
+
+
+-------------------------------------------------------------------------
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="Test_Finnone.Cibil_Finnone"/>
+      <class name="Test_Finnone.Disbursal_Initiation"/>
+      <class name="Test_Finnone.PDOC_finnone"/>
+      <class name="Test_Finnone.FI_Initiation_Finnone"/>
+      <class name="Test_Finnone.sourcing_finnone"/>
+      <class name="Test_Finnone.DDE_finnone"/>
+      <class name="Test_Finnone.Underwriting_finnone"/>
+      <class name="Test_Finnone.DDEQC_finnone"/>
+      <class name="Test_Finnone.Disbursal_details"/>
+    </classes>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="UAT_CAS_Other_than__LPL.sourcing_comments">
+        <methods>
+          <include name="Sourcing" invocation-numbers="0"/>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- UAT_CAS_Other_than__LPL.sourcing_comments -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

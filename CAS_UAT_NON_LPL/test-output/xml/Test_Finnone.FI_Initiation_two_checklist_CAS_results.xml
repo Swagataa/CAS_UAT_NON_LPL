@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CAS Regression Test Cases"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="31.093">
+  <properties />
+  
+  
+            <testcase name="FIinitiation" time="31.093" classname="Test_Finnone.FI_Initiation_two_checklist_CAS" />
+      
+</testsuite>

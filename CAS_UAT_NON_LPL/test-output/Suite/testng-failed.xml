@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="Test_Finnone.Underwriting_finnone">
+        <methods>
+          <include name="Underwriting" invocation-numbers="0"/>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- Test_Finnone.Underwriting_finnone -->
+      <class name="Test_Finnone.Disbursal_details">
+        <methods>
+          <include name="Application_logout"/>
+          <include name="Disbursal_detail"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- Test_Finnone.Disbursal_details -->
+      <class name="Test_Finnone.Disbursal_Initiation">
+        <methods>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+          <include name="Disbursal" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test_Finnone.Disbursal_Initiation -->
+      <class name="Test_Finnone.Dedupe_Referral_Finnone">
+        <methods>
+          <include name="Dedupe_referral"/>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- Test_Finnone.Dedupe_Referral_Finnone -->
+      <class name="Test_Finnone.PDOC_finnone">
+        <methods>
+          <include name="PDOC"/>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+        </methods>
+      </class> <!-- Test_Finnone.PDOC_finnone -->
+      <class name="Test_Finnone.DDEQC_finnone">
+        <methods>
+          <include name="Application_logout"/>
+          <include name="setupapplication"/>
+          <include name="DDEQC" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Test_Finnone.DDEQC_finnone -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

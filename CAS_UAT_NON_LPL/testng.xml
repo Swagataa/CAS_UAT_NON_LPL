@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CAS Regression Suite">
+<listeners>   
+	  <listener class-name="utility.EmailableReporter"/>
+      <listener class-name="utility.ExecutionListerner"/>
+</listeners>
+  <test name="CAS Regression Test Cases">
+    <classes>
+      <class name="UAT_CAS_Other_than__LPL.sourcing"/>
+      <class name="UAT_CAS_Other_than__LPL.Cibil_Referral"/>
+      <class name="UAT_CAS_Other_than__LPL.DDEQC"/>     
+      <class name="UAT_CAS_Other_than__LPL.FI_Initiation_four_checklist"/>
+      <class name="UAT_CAS_Other_than__LPL.FI_Verification_four_checklist"/>
+      <class name="UAT_CAS_Other_than__LPL.FI_Completion"/>
+      <class name="UAT_CAS_Other_than__LPL.Underwriting"/>
+      <class name="UAT_CAS_Other_than__LPL.PDOC"/>
+      <class name="UAT_CAS_Other_than__LPL.Disbursal_details"/>
+      <class name="UAT_CAS_Other_than__LPL.Disbursal_Initiation"/>
+    </classes>
+  </test>
+</suite>
