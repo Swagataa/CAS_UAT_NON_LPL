@@ -792,7 +792,7 @@ public class sourcing extends BrowserSetup{
 
 		wait.until(ExpectedConditions.visibilityOf(DOB));
 
-		DOB.sendKeys("13/03/1987");
+		DOB.sendKeys("01/01/1987");
 
 		WebElement fathername = driver.findElement(By.id("txtFatherName"));
 

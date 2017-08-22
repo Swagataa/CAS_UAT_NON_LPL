@@ -207,6 +207,8 @@ public class FI_Initiation_four_checklist extends BrowserSetup {
 		 
 		 searchcriteriaGo.click();
 		 
+		 Thread.sleep(1000);
+		 
 		 /*----------- Return From residential Verification-------------- */
 		 
 		 List<String> returnResidenceverification = new ArrayList<String>(driver.getWindowHandles());

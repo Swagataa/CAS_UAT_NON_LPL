@@ -8,6 +8,8 @@
   <test name="CAS Regression Test Cases">
     <classes>
       <class name="UAT_CAS_Other_than__LPL.sourcing"/>
+      <class name="UAT_CAS_Other_than__LPL.DDE"/>
+      <class name="UAT_CAS_Other_than__LPL.Cibil_Update"/>
       <class name="UAT_CAS_Other_than__LPL.Cibil_Referral"/>
       <class name="UAT_CAS_Other_than__LPL.DDEQC"/>     
       <class name="UAT_CAS_Other_than__LPL.FI_Initiation_four_checklist"/>

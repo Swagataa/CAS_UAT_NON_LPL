@@ -338,6 +338,22 @@ public class DDE extends BrowserSetup{
 		
 		Thread.sleep(2000);
 		
+		WebElement areacode = driver.findElement(By.id("txtStdisd"));
+		
+		wait.until(ExpectedConditions.visibilityOf(areacode));
+		
+		areacode.sendKeys("011");
+
+		Thread.sleep(1000);
+		
+		WebElement landline = driver.findElement(By.id("txtPhoneOne"));
+		
+		wait.until(ExpectedConditions.visibilityOf(landline));
+		
+		landline.sendKeys("49487150");
+		
+		Thread.sleep(1000);
+		
 		WebElement txtmobile = driver.findElement(By.id("txtMobile"));
 		
 		wait.until(ExpectedConditions.visibilityOf(txtmobile));		
@@ -584,13 +600,13 @@ public class DDE extends BrowserSetup{
 		 
 		 selrateEmi.selectByIndex(3);
 		 
-		 WebElement flat = driver.findElement(By.id("txtFlat"));
+	/*	 WebElement flat = driver.findElement(By.id("txtFlat"));
 		 
 		 wait.until(ExpectedConditions.visibilityOf(flat));
 		 
 		 flat.clear();
 		 
-		 flat.sendKeys("9");
+		 flat.sendKeys("9"); */
 		 
 		 WebElement firstEMI = driver.findElement(By.id("txtFirstEMIMonth"));
 		 
@@ -604,7 +620,9 @@ public class DDE extends BrowserSetup{
 		 
 		 firstemiyr.sendKeys(first_EMI_Year);
 		 
-		 /* WebElement nomineename = driver.findElement(By.id("txtNomineeName"));
+	if(!Life_Insurance.equalsIgnoreCase("NO")){
+		 
+		  WebElement nomineename = driver.findElement(By.id("txtNomineeName"));
 		 
 		 wait.until(ExpectedConditions.visibilityOf(nomineename));
 		 
@@ -620,7 +638,8 @@ public class DDE extends BrowserSetup{
 		 
 		 wait.until(ExpectedConditions.visibilityOf(nomineeDOB));
 		 
-		 nomineeDOB.sendKeys("01/01/2001");*/
+		 nomineeDOB.sendKeys("01/01/2001"); 
+		 	}
 		 
 		 WebElement savebutton = driver.findElement(By.name("btnSave"));
 		 

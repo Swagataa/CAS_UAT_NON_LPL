@@ -28,7 +28,7 @@ public class Underwriting extends BrowserSetup{
 			String credit_program,String Scheme,String asset_cat,String asset_make,String asset_model,String Dealer_Code,String TM_Code,String SE_Code,String Constitution,String loan_amount,
 			String loan_Tennure,String first_EMI_Month,String first_EMI_Year,String Advance_EMI,String Disburse_To,String Life_Insurance) throws Throwable 
 	{
-		wait = new WebDriverWait(driver, 10);		
+		wait = new WebDriverWait(driver, 15);		
 		FileInputStream fis = new FileInputStream(ApplicationIdsfilepath1); 
 		  Workbook wobk = WorkbookFactory.create(fis); 
 		  @SuppressWarnings("unused")
@@ -94,7 +94,7 @@ public class Underwriting extends BrowserSetup{
 
 		// Excel should start
 
-	//	searchappId.sendKeys(app_id);
+		searchappId.sendKeys(app_id);
 
 		// Screenshotpath = fn_screenshot(Screenshotpath);
 
@@ -544,7 +544,7 @@ public class Underwriting extends BrowserSetup{
 
 		Thread.sleep(1500);
 
-		/*------------------ Cibil View File TWL -------------------------*/
+		/*------------------ Cibil View File -------------------------*/
 
 		WebElement cibilviewfilebtn = driver.findElement(By.xpath("//form[@name='underWriterAF']/table[16]/tbody[1]/tr[3]/td[4]/input[1]"));
 	
@@ -552,7 +552,7 @@ public class Underwriting extends BrowserSetup{
 
 		cibilviewfilebtn.click();
 		
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		/*------------------- Cibil window -----------------------*/
 
@@ -588,12 +588,16 @@ public class Underwriting extends BrowserSetup{
 				}
 			}
 		}
+		
+	//	Thread.sleep(500);
 
 		WebElement cibilcheckbox = driver.findElement(By.name("selVerifyCibil"));
 
 		wait.until(ExpectedConditions.visibilityOf(cibilcheckbox));
 
 		cibilcheckbox.click();
+		
+		Thread.sleep(800);
 		
 		driver.close();
 		
@@ -673,7 +677,7 @@ public class Underwriting extends BrowserSetup{
 
 		devApprovalbtn.click();
 		
-		Thread.sleep(1000);
+		Thread.sleep(7000);
 
 		/*----------- Deviation Approval Window --------- */
 
@@ -786,16 +790,18 @@ public class Underwriting extends BrowserSetup{
 				}
 			}
 		}
-
-		WebElement devstatus = driver.findElement(By.name("deviationAction"));
-
-	//	wait.until(ExpectedConditions.visibilityOf(devstatus));
 		
-		if(wait.until(ExpectedConditions.visibilityOf(devstatus)).isDisplayed()==true){
-			
+	//	WebElement devstatus = driver.findElement(By.xpath("//table[@class='TABLEATTRIBUTES']/tbody[1]/tr[2]/td[3]/select[1]"));
+		
+		WebElement devstatus = driver.findElement(By.name("deviationAction"));		
+		
+		wait.until(ExpectedConditions.visibilityOf(devstatus));		
+
 		Select seldevstatus = new Select(devstatus);
 
 		seldevstatus.selectByIndex(1);
+		
+		Thread.sleep(2000);
 
 		WebElement approvebtn = driver.findElement(By.name("btnApprove"));
 
@@ -803,13 +809,15 @@ public class Underwriting extends BrowserSetup{
 
 		approvebtn.click();
 		
-		}
-		else{
-			System.out.println("Decision box is not available");
-		}
+//		}
+		
+		Thread.sleep(1000);
+		
 		WebElement closebtndev = driver.findElement(By.name("btnReject"));
 
 		wait.until(ExpectedConditions.visibilityOf(closebtndev));
+		
+	//	Thread.sleep(300);
 
 		closebtndev.click();
 		
@@ -886,12 +894,6 @@ public class Underwriting extends BrowserSetup{
 		wait.until(ExpectedConditions.visibilityOf(btnQuestion));
 
 		btnQuestion.click();
-
-		WebElement Underwritingchecklist = driver.findElement(By.name("devApproval"));
-
-		wait.until(ExpectedConditions.visibilityOf(Underwritingchecklist));
-
-		Underwritingchecklist.click();
 		
 		Thread.sleep(1000);
 
@@ -1006,12 +1008,15 @@ public class Underwriting extends BrowserSetup{
 			}
 		}
 
+		Thread.sleep(500);
+		
+		if (!driver.findElement(By.xpath("//form[@name='underwritingQuestionMainAF']/table[5]/tbody[1]/tr[1]/td[1]")).getText().equalsIgnoreCase("No Question Found"))
+		{
+		
 		WebElement selResponse1 = driver.findElement(By.xpath("//table[@class='TABLEATTRIBUTES']/tbody/tr[1]/td[3]/font[1]/Select[1]"));
 
-//		wait.until(ExpectedConditions.visibilityOf(selResponse1));
+		wait.until(ExpectedConditions.visibilityOf(selResponse1));
 		
-		if(wait.until(ExpectedConditions.visibilityOf(selResponse1)).isDisplayed()==true){
-			
 		Select SelResponse1 = new Select(selResponse1);
 
 		SelResponse1.selectByIndex(3);
@@ -1066,6 +1071,8 @@ public class Underwriting extends BrowserSetup{
 		else{
 			System.out.println("Underwriting questionaire is not available");
 		}
+		
+		Thread.sleep(1000);
 		
 		WebElement btnclose = driver.findElement(By.name("btnClose"));
 
@@ -1194,6 +1201,51 @@ public class Underwriting extends BrowserSetup{
 		wait.until(ExpectedConditions.visibilityOf(saveandproceed));
 
 		saveandproceed.click();
+		
+		if(wait.until(ExpectedConditions.alertIsPresent())!=null){
+			
+			driver.switchTo().alert().accept();
+			
+			WebElement devApprovalbtn1 = driver.findElement(By.name("devApproval"));
+
+			wait.until(ExpectedConditions.visibilityOf(devApprovalbtn1));
+
+			devApprovalbtn.click();
+			
+			/*--------------- deviation approval window ------------ */
+			
+			List<String> devapproval = new ArrayList<String>(driver.getWindowHandles());
+			
+			Collections.sort(devapproval);
+
+			driver.switchTo().window(devapproval.get(3));
+			
+			System.out.println(driver.getTitle());
+			
+			if(!driver.getTitle().equalsIgnoreCase("Deviation Approval")){
+				
+				driver.switchTo().window(devapproval.get(2));
+				System.out.println(driver.getTitle());
+				
+				if(!driver.getTitle().equalsIgnoreCase("Deviation Approval")){
+					
+					driver.switchTo().window(devapproval.get(1));
+					System.out.println(driver.getTitle());
+				}
+				if(!driver.getTitle().equalsIgnoreCase("Deviation Approval")){
+					driver.switchTo().window(devapproval.get(0));
+					System.out.println(driver.getTitle());
+				}
+			}
+			
+			driver.close();
+			
+			WebElement saveandproceed1= driver.findElement(By.name("btnSave"));
+
+			wait.until(ExpectedConditions.visibilityOf(saveandproceed1));
+
+			saveandproceed1.click();
+		}
 
 		Thread.sleep(10000);
 
@@ -1203,10 +1255,4 @@ public class Underwriting extends BrowserSetup{
 
 		exit.click();
 	}
-
-
-	
-	
-	
-	
 }

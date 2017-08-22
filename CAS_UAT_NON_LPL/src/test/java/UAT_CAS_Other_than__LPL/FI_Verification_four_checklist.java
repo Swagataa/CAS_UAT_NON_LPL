@@ -527,8 +527,19 @@ public class FI_Verification_four_checklist extends BrowserSetup{
 		WebElement exit = driver.findElement(By.name("Close"));
 
 		wait.until(ExpectedConditions.visibilityOf(exit));
+		
+		if(exit.isDisplayed()==true){
+			
+			exit.click();
+		}
+		else{
+			WebElement FIlogout = driver.findElement(By.name("Image3"));
 
-		exit.click();
+			wait.until(ExpectedConditions.visibilityOf(FIlogout));
+
+			FIlogout.click();
+		}
+		
 	
 	}
 	
